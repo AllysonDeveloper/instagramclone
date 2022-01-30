@@ -1,38 +1,170 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.App{
+  background-color: #ccc;
+}
+header{
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+  height: 60px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.centro{
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header input{
+  margin-left: 10px;
+  width: 200px;
+  height: 25px;
+  padding: 5px;
+  outline: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header input[type="submit"], .btn{
+  width: 50px;
+  background-color: blue;
+  color:white;
+  border: 0;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn{
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header a{
+  margin-left: 10px;
+  cursor: pointer;
+  color: brown;
+}
+
+#modalContainer{
+  display: none;
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+#formContainer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 90%;
+  max-width: 500px;
+  background-color: white;
+}
+
+#formContainer form{
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+#formContainer form input{
+  width: 90%;
+  margin: 10px 0;
+  height: 30px;
+}
+
+.closeModal{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-color: blue;
   color: white;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  right: -10px;
+  top: -10px;
 }
 
-.App-link {
-  color: #61dafb;
+#modalContainerPost{
+  display: none;
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#formContainerPost{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 90%;
+  max-width: 500px;
+  background-color: white;
+}
+
+#formContainerPost form{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#formContainerPost form input{
+  width: 90%;
+  margin: 10px 0;
+  height: 30px;
+}
+
+.postSingle{
+  width: 80%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+  padding: 40px 20px;
+  background-color: white;
+}
+
+.postSingle img{
+  margin: 20px 0;
+}
+
+.postSingle p{
+  margin-bottom: 20px;
+}
+
+.postSingle form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.postSingle form textarea{
+  outline: 0;
+  padding: 10px;
+}
+.postSingle form input[type='submit']{
+  width: 100px;
+  background-color: blue;
+  color:white;
+  border: 0;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
 }
